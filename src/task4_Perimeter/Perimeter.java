@@ -14,12 +14,15 @@ public class Perimeter {
         String shape = in.next();
         double side = in.nextDouble();
         double perimeter = 0;
+
         if (shape.equals("circle")) {
             Circle circle = new Circle(side);
             perimeter = circle.getPerimeter();
         } else if (shape.equals("square")) {
-            perimeter = 4 * side;
-        }
+            Square square = new Square (side);
+            perimeter = square.getPerimeter();
+        } else System.out.println("Enter Square or Circle");
+
         System.out.println("perimeter of " + shape + " with side/radius " + side + " is " + perimeter);
     }
 
@@ -32,6 +35,17 @@ public class Perimeter {
 
         double getPerimeter() {
             return 2 * PI * radius;
+        }
+    }
+
+    public static class Square{
+        double side;
+
+        Square(double side){
+            this.side = side;
+        }
+        double getPerimeter(){
+            return 4 * side;
         }
     }
 
