@@ -1,5 +1,5 @@
-out
-target
-lib
 *.iml
-.idea
+out
+.idea/
+target/
+lib/
