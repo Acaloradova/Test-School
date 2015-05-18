@@ -16,17 +16,17 @@ public class LuckyTicketTest {
     }
 
     @Test
-    public void isValidNumber_empty() throws Exception {
+    public void testIsValidNumber_empty() throws Exception {
         assertFalse("empty test should failed", LuckyTicket.isValidNumber(""));
     }
 
     @Test
-    public void testIsLucky_words() throws Exception {
+    public void testIsValidNumber_symbols() throws Exception {
         assertFalse("not a number", LuckyTicket.isValidNumber("ticket"));
     }
 
     @Test
-    public void testIsLucky_4symbols() throws Exception {
+    public void testIsValidNumber_4symbols() throws Exception {
         assertFalse("less than 6 symbols", LuckyTicket.isValidNumber("1221"));
     }
 }
